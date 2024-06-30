@@ -16,6 +16,10 @@ intents.message_content = True
 bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 
 
+@bot.command()
+async def name(ctx):
+    await ctx.send("Привет")
+
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
